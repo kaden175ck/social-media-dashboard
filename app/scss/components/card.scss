@@ -1,0 +1,6 @@
+@use '../util' as *;
+// 如果你写 @use '../util'; → 必须用 util.rem(20) 来调用。
+// 如果你写 @use '../util' as *; → 直接 rem(20) 就行。
+.card{
+    padding:rem(20);
+}

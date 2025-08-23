@@ -1,0 +1,53 @@
+// 存在的目的是每次我们需要media query，不用每次都像下面这样不停的调用，或者更改
+// @media (min-width: 50em){000000}
+// Media Query = CSS 里的条件语句，用来做响应式设计，
+// 让网站在不同设备/环境下都能有合适的样式。
+// 
+// mixin 是  把断点逻辑  封装     起来，调用更方便
+// 两者结合可以让响应式代码简洁且好维护
+// 性能上没差别，主要是提高开发效率和可维护性
+// 如果你项目里到处都要写类似的 @media (min-width: 768px)，就很啰嗦，也不好维护。
+
+// 640px, 950px, 1400px
+// 为啥用 em？因为 媒体查询里的 em 按浏览器默认字体大小算（通常 16px），
+// 在用户缩放时更健壮，推荐做法。上面的注释里已把换算到 px 的值标出来了。
+$breakpoints-up: (
+	'medium': '40em',
+	'large': '59.375em',
+	'xlarge': '87.5em',
+);
+
+// 639px, 1149px, 1399px
+$breakpoints-down: (
+	'small': '39.9375em',
+	'medium': '59.3125em',
+	'large': '87.4375em',
+);
+
+
+// map.get($breakpoints-up, $size)并且在文件开头加：@use "sass:map";
+
+@mixin breakpoint($size) {
+	@media (min-width: map-get($breakpoints-up, $size)) {
+		@content;
+	}
+}
+
+@mixin breakpoint-down($size) {
+	@media (max-width: map-get($breakpoints-down, $size)) {
+		@content;
+	}
+}
+
+// 如果我们想在其他地方使用比如说这个mixin breakpoints，
+// 我们会说
+// h1{ 
+// @include breakpoint(large){
+// 	font: size 3rem;
+// }
+// 其实就相当于我们正常这样写CSS
+// @media(min-width:87.5em){
+// 	h1{
+// 		font: size 3rem;
+// 	}
+// }

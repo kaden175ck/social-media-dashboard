@@ -1,0 +1,37 @@
+
+@use '../util' as *;
+// 如果你写 @use '../util'; → 必须用 util.rem(20) 来调用。
+// 如果你写 @use '../util' as *; → 直接 rem(20) 就行。
+
+
+
+// & 在 Sass 里代表 父选择器（这里就是 .toggle）。
+// 所以 &_button = .toggle_button
+.toggle{
+    border: none;
+
+    &_wrapper {
+
+    }
+    input[type="radio"] {
+
+    }
+    &_button {
+        width: rem(16);
+        height: rem(16);
+        border-radius: 50%;
+        background-color: var(--toggle);
+    }
+    &_button{
+        width:rem(16);
+        height:rem(16);
+        border-radius: 50%;
+        background-color: var(--toggle);
+
+    }
+
+    label{
+        
+    }
+    
+}

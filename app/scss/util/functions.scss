@@ -1,0 +1,14 @@
+@use "sass:math";
+
+// Source: https://css-tricks.com/snippets/sass/px-to-em-functions/
+// function convert pixel to ems
+@function rem($pixels, $context: 16) {
+	@return (math.div($pixels, $context)) * 1rem;
+}
+
+
+// h1{
+//     font-size: 30px;
+//     //    30/16=1.875
+//     font-size: rem(30);有了这个函数之后，用这个就可以换算了，不用计算器
+// }

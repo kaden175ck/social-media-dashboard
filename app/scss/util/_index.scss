@@ -1,0 +1,23 @@
+// mainly functions cariables, and mixin
+// util（utility 的缩写）通常放置 工具类的 SCSS 文件，比如：
+// variables（变量） → 定义颜色、字体大小、间距等
+// mixins（混入） → 可复用的代码片段，比如响应式布局、flex 居中
+// functions（函数） → 用来计算或处理值，比如颜色加深、透明度转换
+// breakpoints（断点） → 定义响应式设计中不同屏幕宽度
+// fonts（字体） → 统一字体家族、字号、行高等
+// colors（颜色） → 定义全局颜色系统（primary, secondary, background 等）
+// 这些文件不会直接生成样式，而是作为 工具，被你的组件样式或全局样式 @use 或 @import 进去。
+
+
+// @forward 'breakpoints'; → 把 _breakpoints.scss 的东西导出来
+// 你在 index.scss 里多次 @forward，等于把多个小工具文件合并到一个入口
+// 其它文件只要 @use 'util' as util;，就能调用所有 util 的变量、mixin、function
+
+
+@forward 'breakpoints';
+
+@forward 'functions';
+
+// @forward 'colors';
+// @forward 'fonts';
+// 把colors和fonts都放到了global了
