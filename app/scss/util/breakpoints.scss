@@ -11,6 +11,10 @@
 // 640px, 1150px, 1400px
 // 为啥用 em？因为 媒体查询里的 em 按浏览器默认字体大小算（通常 16px），
 // 在用户缩放时更健壮，推荐做法。上面的注释里已把换算到 px 的值标出来了。
+
+
+@use "sass:map";
+
 $breakpoints-up: (
 	'medium': '40em',
 	'large': '71.875em',
@@ -28,13 +32,13 @@ $breakpoints-down: (
 // map.get($breakpoints-up, $size)并且在文件开头加：@use "sass:map";
 
 @mixin breakpoint($size) {
-	@media (min-width: map-get($breakpoints-up, $size)) {
+	@media (min-width: map.get($breakpoints-up, $size)) {
 		@content;
 	}
 }
 
 @mixin breakpoint-down($size) {
-	@media (max-width: map-get($breakpoints-down, $size)) {
+	@media (max-width: map.get($breakpoints-down, $size)) {
 		@content;
 	}
 }
