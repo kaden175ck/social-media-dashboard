@@ -39,6 +39,6 @@ npm-debug.log*
 .DS_Store
 Thumbs.db
 
-
+# design/ 已包含
 #ignore node module folder
 node_modules/

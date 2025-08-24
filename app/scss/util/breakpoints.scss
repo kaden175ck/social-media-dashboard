@@ -8,19 +8,19 @@
 // 性能上没差别，主要是提高开发效率和可维护性
 // 如果你项目里到处都要写类似的 @media (min-width: 768px)，就很啰嗦，也不好维护。
 
-// 640px, 950px, 1400px
+// 640px, 1150px, 1400px
 // 为啥用 em？因为 媒体查询里的 em 按浏览器默认字体大小算（通常 16px），
 // 在用户缩放时更健壮，推荐做法。上面的注释里已把换算到 px 的值标出来了。
 $breakpoints-up: (
 	'medium': '40em',
-	'large': '59.375em',
+	'large': '71.875em',
 	'xlarge': '87.5em',
 );
 
 // 639px, 1149px, 1399px
 $breakpoints-down: (
 	'small': '39.9375em',
-	'medium': '59.3125em',
+	'medium': '71.8125em',
 	'large': '87.4375em',
 );
 
