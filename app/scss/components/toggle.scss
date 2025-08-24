@@ -11,20 +11,31 @@
     border: none;
 
     &_wrapper {
-
+        height: rem(24);
+        border-radius: rem(12);
     }
+
+
     input[type="radio"] {
+        opacity: 0;
 
     }
+
+    &_background{
+        display: block;
+        height: 100%;
+        background: linear-gradient(225deg, var(--toggle-bg-end) 0%, var(--toggle-bg-start) 98.02%);
+
+    }
+
+
     &_button {
         width: rem(16);
         height: rem(16);
         border-radius: 50%;
         background-color: var(--toggle);
     }
-    &_background{
 
-    }
 
     label{
 
