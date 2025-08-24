@@ -2,6 +2,8 @@
 @use '../util' as *;
 
 .header{
+    display:flex;
+    flex-wrap: wrap;
     margin-top: rem(36);
 
     @include breakpoint(medium){
@@ -11,6 +13,11 @@
     }
 
     &_title{
+        width: 100%;
+
+        @include breakpoint(medium){
+            width:auto;
+        }
 
     }
 
@@ -20,7 +27,5 @@
         color: var(--dark-text1);
     }
 
-    &_toggle{
 
-    }
 }
