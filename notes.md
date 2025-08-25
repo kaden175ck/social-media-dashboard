@@ -7,7 +7,6 @@ accessibility
 - 保证可访问性，例如不随便用div，写语义化HTML
 
 
-
 # Set Up Gulp Workflow
  - npm install gulp-cli -g
  - npm init -y
@@ -17,3 +16,6 @@ accessibility
  - social-media-dashboard> gulp 
 
  - Note: deprecated dart-sass@1.25.0: This package has been renamed to 'sass'.
+
+
+ # GitHub Actions 构建要修改一下

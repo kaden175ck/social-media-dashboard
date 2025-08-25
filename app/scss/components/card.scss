@@ -2,51 +2,55 @@
 // 如果你写 @use '../util'; → 必须用 util.rem(20) 来调用。
 // 如果你写 @use '../util' as *; → 直接 rem(20) 就行。
 
+
+
 // cards类是大类，大排版
 // card类是具体单个卡片的排版
-.cards{
 
+
+.cards{
     display: grid;
     grid-template-columns: 1fr;
     gap: rem(30);
-
 
     @include breakpoint(medium) {
         
         grid-template-columns: repeat(2, 1fr);
     }
-
     @include breakpoint(large) {
         grid-template-columns: repeat(4, 1fr);
     }
-
 }
+
+
 
 .card{    
     position: relative;
     overflow: hidden;
-
     // flex: 1; 
     // each card get 25% of total width,don'twork for media
-
     background: var(--dark-card);
     color: var(--dark-text1);
     // width: rem(255); //Temp Style
     text-align: center;
     padding: rem(25);
-
     border-radius: rem(5);
+    transition: background 150ms ease-in-out;
+    cursor: pointer;
+
+
+    &:hover{
+        background: var(--dark-card-hover);
+    }
+
+
 
     &--facebook{
         border-top: rem(5) solid var(--facebook);
-
     }
-
     &--twitter{
         border-top: rem(5) solid var(--twitter);    
     }
-
-
     &--instagram{
         padding-top: rem(30);
         &::before{            
@@ -63,14 +67,14 @@
                 var(--instagram-middle) 50.91%,
                 var(--instagram-start) 100%
             );
-            
         }
     }
-
-
     &--youtube{
        border-top: rem(5) solid var(--youTube);     
     }
+
+
+
 
     &__platform{
         display: flex;
@@ -78,90 +82,92 @@
         align-items: center;
         margin-bottom: rem(28);
 
+        // 轻微调整
+        height: rem(20);
+        margin-top: rem(5);
+
     }
-        &__icon{
-            margin-right: rem(8);
 
-            &--facebook{
 
-            }
-            &--twitter{
-            
-            }
-            &--instagram{
-            
-            }
-            &--youtube{
-            
-            }
 
+
+    &__subtitle{
+        font-size: rem(14);
+        font-weight: 700;
+        // color不需要
+    }
+
+
+
+    &__icon{
+        margin-right: rem(8);
+        &--facebook{
+        }
+        &--twitter{
+        }
+        &--instagram{
+        }
+        &--youtube{
+        }
+    }
+
+
+    &__username{
+        font-weight: 700;
+        font-size: rem(12);
+        // color不需要
+    }
+
+
+    &__followers{
+        margin-bottom: rem(25);
+    }
+
+    &__count{
+        color: var(--light-bg);
+        font-weight: 700;
+        letter-spacing: rem(-2);
+        line-height: 1;
+        margin-bottom: rem(4);
+
+        &--big{
+            font-size: rem(56);
+        }
+        &--small{
+            font-size: rem(32);
+        }
+    }
+
+
+    &__label{
+        color: var(--dark-text1);
+        font-size: rem(12);
+        font-weight: 400;
+        text-transform: uppercase;
+        letter-spacing: rem(5);
+    }
+
+
+    &__change{
+        display: flex;
+        font-size: rem(12);
+        font-weight: 700;
+        justify-content: center;
+        align-items: center;
+
+        &--up{
+            color: var(--limegreen);
+        }
+        &--down{
+            color: var(--brightred);
         }
 
-        &__username{
-            font-weight: 700;
-            font-size: rem(12);
-
+        img{
+            margin-right: rem(4);
         }
+    }
 
-        &__followers{
-            margin-bottom: rem(25);
-            
-        }
+    &__number{
+    }
 
-        &__count{
-            color: var(--light-bg);
-            font-weight: 700;
-            letter-spacing: rem(-2);
-            line-height: 1;
-
-            margin-bottom: rem(4);
-            
-            
-
-
-            &--big{
-                font-size: rem(56);
-
-            }
-            &--small{
-
-            }
-        }
-
-        &__label{
-            
-            color: var(--dark-text1);
-            font-size: rem(12);
-            font-weight: 400;
-            text-transform: uppercase;
-            letter-spacing: rem(5);
-
-        }
-
-        &__change{
-            display: flex;
-
-            font-size: rem(12);
-            font-weight: 700;
-
-            justify-content: center;
-            align-items: center;
-            
-
-            &--up{
-                
-               color: var(--limegreen);
-            }
-            &--down{
-                color: var(--brightred);
-            }
-
-            img{
-                margin-right: rem(4);
-            }
-        }
-
-        &__number{
-            
-        }
 }

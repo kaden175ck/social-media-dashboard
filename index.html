@@ -6,22 +6,16 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
-  <title>Frontend Mentor | [Challenge Name Here]</title>
-
-
-
+  <title>Social Media Dashboard</title>
 
   <!--Google fonts-->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Libertinus+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 
-
   <link rel="stylesheet" href="/dist/style.css" />
   <script defer src="/dist/script.js"></script>
   <!-- 延迟执行 JS，等 HTML 解析完再执行，避免阻塞页面 -->
-
-
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
@@ -33,29 +27,33 @@
 
 
 
-
-
 <body>
-  <header class="header container">
 
+
+  <header class="header container">
 
     <div class="header_title">
       <h1>Social Media Dashboard</h1>
           <span class="header_subtitle">Total Followers: 23,004 Dark Mode</span>
     </div>
-    
+
     <fieldset class="header_toggle toggle" aria-label="theme toggle" role="radiogroup">
+
       <div class="toggle_wrapper">
         <input type="radio" name="theme" id="dark" />
         <input type="radio" name="theme" id="system" checked />
         <input type="radio" name="theme" id="light" />
         <span aria-hidden="true" class="toggle_background"></span>
         <span aria-hidden="true" class="toggle_button"></span>
+        <!-- 这两个 <span>是视觉效果不参与语义，所以 aria-hidden="true"，屏幕阅读器会忽略它们 -->
       </div>
+
       <label for="dark">Dark</label>
       <label for="system">System</label>
       <label for="light">Light</label>
+
     </fieldset>
+
   </header>
 
 
@@ -63,21 +61,18 @@
 
 
 <!-- Top row cards start here --><!-- Top row cards start here --><!-- Top row cards start here -->
+<!-- 大的类是cards，复数，表示这一组的整体排版，单数card类是单独卡片内的排版 -->
 
   <main>
     <section class="container cards">
 
-
-
       <div class="card card--twitter">
-
         <div class="card__platform">
             <img class="card__icon" src="images/icon-twitter.svg" alt="Twitter">
             <div class="card__username">@nathanf</div>
         </div>
 
         <div class="card__followers">
-
           <div class="card__count card__count--big">1044</div>
           <div class="card__label">Followers</div>
         </div>
@@ -86,45 +81,34 @@
           <img src="images/icon-up.svg" alt="up arrow"/> 
           <div class="card__number">99 Today</div>
         </div>
-
       </div>
 
 
-
-
       <div class="card card--instagram">
-
         <div class="card__platform">
             <img class="card__icon" src="images/icon-instagram.svg" alt="Instagram">
             <div class="card__username">@nathanf</div>
         </div>
 
         <div class="card__followers">
-
           <div class="card__count card__count--big">11k</div>
           <div class="card__label">Followers</div>
         </div>
         
-
-
         <div class="card__change card__change--up">
           <img src="images/icon-up.svg" alt="up arrow"/> 
           <div class="card__number">1099 Today</div>
         </div>
-
       </div>
 
 
-
       <div class="card card--youtube">
-
           <div class="card__platform">
               <img class="card__icon" src="images/icon-youtube.svg" alt="Youtube">
               <div class="card__username">@nathanf</div>
           </div>
 
           <div class="card__followers">
-
             <div class="card__count card__count--big">8239</div>
             <div class="card__label">Followers</div>
           </div>
@@ -133,21 +117,16 @@
             <img src="images/icon-down.svg" alt="down arrow"/> 
             <div class="card__number">144 Today</div>
           </div>
-
       </div>
 
 
-
-
       <div class="card card--facebook">
-
           <div class="card__platform">
               <img class="card__icon" src="images/icon-facebook.svg" alt="Facebook">
               <div class="card__username">@nathanf</div>
           </div>
 
           <div class="card__followers">
-
             <div class="card__count card__count--big">1987</div>
             <div class="card__label">Followers</div>
           </div>
@@ -156,9 +135,7 @@
             <img src="images/icon-up.svg" alt="up arrow"/> 
             <div class="card__number">12 Today</div>
           </div>
-
       </div>
-
 
     </section>
 
@@ -166,14 +143,10 @@
 
 
 <!-- bottom row start here --><!-- bottom row start here --><!-- bottom row start here -->
-
-
-
+<!-- 同理：大的类是cards，复数，表示这一组的整体排版，单数card类是单独卡片内的排版 -->
 
     <section class="container">
       <h2>Overview - Today</h2>
-
-
         <div class="cards">
 
 
@@ -187,7 +160,6 @@
             </div>
           </div>
 
-
           <div class="card card-grid">
             <div class="card__subtitle">Likes</div>
             <img class="" src="/images/icon-facebook.svg" alt="Facebook" />
@@ -197,7 +169,6 @@
               <div class="card__number">2%</div>
             </div>
           </div>
-
 
           <div class="card card-grid">
             <div class="card__subtitle">Likes</div>
@@ -209,7 +180,6 @@
             </div>
           </div>
 
-
           <div class="card card-grid">
             <div class="card__subtitle">Profile Views</div>
             <img class="" src="/images/icon-instagram.svg" alt="Instagram" />
@@ -219,7 +189,6 @@
               <div class="card__number">1375%</div>
             </div>
           </div>
-
 
           <div class="card card-grid">
             <div class="card__subtitle">Retweets</div>
@@ -231,7 +200,6 @@
             </div>
           </div>
 
-
           <div class="card card-grid">
             <div class="card__subtitle">Likes</div>
             <img class="" src="/images/icon-twitter.svg" alt="Twitter" />
@@ -242,7 +210,6 @@
             </div>
           </div>
 
-
           <div class="card card-grid">
             <div class="card__subtitle">Likes</div>
             <img class="" src="/images/icon-youtube.svg" alt="YouTube" />
@@ -252,7 +219,6 @@
               <div class="card__number">19%</div>
             </div>
           </div>
-
 
           <div class="card card-grid">
             <div class="card__subtitle">Total Views</div>
@@ -265,9 +231,7 @@
           </div>
 
 
-
         </div>
-
     </section>
     
 
@@ -276,15 +240,10 @@
   
 
   
-
-
-  
-
-  
   
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="#">Hao</a>.
   </div>
 </body>
 </html>
