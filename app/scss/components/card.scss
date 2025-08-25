@@ -2,7 +2,8 @@
 // 如果你写 @use '../util'; → 必须用 util.rem(20) 来调用。
 // 如果你写 @use '../util' as *; → 直接 rem(20) 就行。
 
-
+// cards类是大类，大排版
+// card类是具体单个卡片的排版
 .cards{
 
     display: grid;
@@ -70,6 +71,15 @@
     &--youtube{
        border-top: rem(5) solid var(--youTube);     
     }
+
+
+
+    &--grid{
+
+    }
+
+
+    
 
 
     &__platform{
