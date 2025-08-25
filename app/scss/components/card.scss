@@ -1,11 +1,33 @@
 @use '../util' as *;
 // 如果你写 @use '../util'; → 必须用 util.rem(20) 来调用。
 // 如果你写 @use '../util' as *; → 直接 rem(20) 就行。
+
+
+.cards{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: rem(30);
+
+
+    @include breakpoint(medium) {
+        
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include breakpoint(large) {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+}
+
 .card{
+
+    // flex: 1; 
+    // each card get 25% of total width,don'twork for media
 
     background: var(--dark-card);
     color: var(--dark-text1);
-    width: rem(255); //Temp Style
+    // width: rem(255); //Temp Style
     text-align: center;
     padding: rem(25);
 
