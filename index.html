@@ -39,18 +39,20 @@
 
     <fieldset class="header_toggle toggle" aria-label="theme toggle" role="radiogroup">
 
+      <label for="dark">Dark Mode <span class="visually-hidden">On</span></label>
       <div class="toggle_wrapper">
         <input type="radio" name="theme" id="dark" />
-        <input type="radio" name="theme" id="system" checked />
+        <!-- <input type="radio" name="theme" id="system" checked /> -->
         <input type="radio" name="theme" id="light" />
         <span aria-hidden="true" class="toggle_background"></span>
         <span aria-hidden="true" class="toggle_button"></span>
         <!-- 这两个 <span>是视觉效果不参与语义，所以 aria-hidden="true"，屏幕阅读器会忽略它们 -->
-      </div>
+        </div>
+        
+        
+      <!-- <label for="system">System</label> -->
+      <label for="light" class="visually-hidden">Dark Mode Off</label>
 
-      <label for="dark">Dark</label>
-      <label for="system">System</label>
-      <label for="light">Light</label>
 
     </fieldset>
 
