@@ -29,7 +29,8 @@
     overflow: hidden;
     // flex: 1; 
     // each card get 25% of total width,don'twork for media
-    background: var(--dark-card);
+    // background: var(--dark-card);
+    background: var(--card-bg);
     color: var(--dark-text1);
     // width: rem(255); //Temp Style
     text-align: center;
@@ -40,7 +41,8 @@
 
 
     &:hover{
-        background: var(--dark-card-hover);
+        // background: var(--dark-card-hover);
+        background: var(--card-hover);
     }
 
 
@@ -95,6 +97,7 @@
         font-size: rem(14);
         font-weight: 700;
         // color不需要
+        color: var(--text-color2);
     }
 
 
@@ -116,6 +119,7 @@
         font-weight: 700;
         font-size: rem(12);
         // color不需要
+        color: var(--text-color2);
     }
 
 
@@ -124,7 +128,8 @@
     }
 
     &__count{
-        color: var(--light-bg);
+        // color: var(--light-bg);
+        color: var(--text-color);
         font-weight: 700;
         letter-spacing: rem(-2);
         line-height: 1;
@@ -140,7 +145,8 @@
 
 
     &__label{
-        color: var(--dark-text1);
+        // color: var(--dark-text1);
+        color: var(--text-color2);
         font-size: rem(12);
         font-weight: 400;
         text-transform: uppercase;

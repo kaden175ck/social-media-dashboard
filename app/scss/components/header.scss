@@ -7,7 +7,7 @@
     margin-top: rem(36);
 
     @include breakpoint(medium){
-        display:flex;
+        // display:flex;
         justify-content: space-between;
         align-items: center;
     }
@@ -24,7 +24,8 @@
     &_subtitle{
         font-size: rem(14);
         font-weight: 700;
-        color: var(--dark-text1);
+        // color: var(--dark-text1);
+        color: var(--text-color2);
     }
 
 
